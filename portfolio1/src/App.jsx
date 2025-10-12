@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink, Code, ChevronDown, Menu, X, Star,
 import projectImg from "./assets/resort.png";
 import projectImg2 from "./assets/footwear site.png";
 import projectImg3 from "./assets/sentiment.png"; 
-
+import profilePhoto from "./assets/jaaseem.jpg";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,46 +112,57 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="hero" className="hero-section">
         <div className="container">
-          <div className="hero-content">
-            <div className="profile-container">
-              <div className="profile-ring">
-                <div className="profile-inner">
-                  <span className="profile-text">JA</span>
+          <div className="hero-layout">
+            {/* Left Profile Image */}
+            <div className="hero-profile-left">
+              <div className="profile-image-container">
+                <div className="profile-ring-large">
+                  <div className="profile-inner-large">
+                    {/* Replace the src below with your actual profile image */}
+                    <img 
+                      src={profilePhoto} 
+                      alt="Jaaseem Ahamed" 
+                      className="profile-photo"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-         
-            <h1 className="hero-title">
-              Hi, I'm JAASEEM AHAMED.M.Y
-            </h1>
-            
-            <div className="role-badges">
-              {[
-                { icon: Code, text: 'Developer' },
-                { icon: Zap, text: 'Problem Solver' },
-                { icon: Database, text: 'Data Analyst' },
-                { icon: Brain, text: 'AI Engineer' }
-              ].map((item, index) => (
-                <div key={index} className="role-badge">
-                  <item.icon size={20} />
-                  <span>{item.text}</span>
-                </div>
-              ))}
-            </div>
-            
-            <p className="hero-description">
-              Passionate AI & Data Science student turning intelligent systems into real-world solutions. 
-              Specializing in machine learning, data-driven insights, and innovative web applications.
-            </p>
-            
-            <div className="hero-actions">
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="cta-button"
-              >
-                View My Work
-                <ChevronDown size={20} />
-              </button>
+
+            {/* Right Content */}
+            <div className="hero-content">
+              <h1 className="hero-title">
+                Hi, I'm JAASEEM AHAMED.M.Y
+              </h1>
+              
+              <div className="role-badges">
+                {[
+                  { icon: Code, text: 'Developer' },
+                  { icon: Zap, text: 'Problem Solver' },
+                  { icon: Database, text: 'Data Analyst' },
+                  { icon: Brain, text: 'AI Engineer' }
+                ].map((item, index) => (
+                  <div key={index} className="role-badge">
+                    <item.icon size={20} />
+                    <span>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <p className="hero-description">
+                Passionate AI & Data Science student turning intelligent systems into real-world solutions. 
+                Specializing in machine learning, data-driven insights, and innovative web applications.
+              </p>
+              
+              <div className="hero-actions">
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="cta-button"
+                >
+                  View My Work
+                  <ChevronDown size={20} />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -162,7 +173,6 @@ const Portfolio = () => {
       </section>
 
 
-{/* Projects Section */}
 {/* Projects Section */}
 <section id="projects" className="projects-section">
   <div className="container">
@@ -295,7 +305,7 @@ Three Modes:
 Users can directly enter a movie review, and the system will analyze it using the trained model and database to predict whether the sentiment is positive or negative.
 
 🧪 Demo Mode:
-Uses a preloaded demo dataset to showcase the model’s sentiment predictions and provide a summary of overall sentiments in the dataset.
+Uses a preloaded demo dataset to showcase the model's sentiment predictions and provide a summary of overall sentiments in the dataset.
 
 ⚡ Quick Analysis Mode:
 Allows users to provide a direct dataset path for instant analysis without manual upload or setup.
@@ -367,7 +377,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
           <div className="contact-content">
             <h2 className="section-title">Let's Connect</h2>
             <p className="contact-description">
-              Ready to collaborate or discuss exciting opportunities? I'd love to hear from you!
+              Ready to collaborate or discuss exciting opportunities? I'd like to hear from you!
             </p>
             
             <div className="contact-links">
@@ -409,7 +419,6 @@ Allows users to provide a direct dataset path for instant analysis without manua
           </div>
         </div>
       </footer>
-
       <style>{`
         * {
           margin: 0;
@@ -580,12 +589,94 @@ Allows users to provide a direct dataset path for instant analysis without manua
           padding: 0 24px;
         }
 
-        .hero-section {
-          padding-top: var(--navbar-height, 80px);
-          display: flex;
-          align-items: center;
-        }
+        /* Add these styles to your existing CSS */
 
+.hero-section {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: 350px 1fr;
+    gap: 64px;
+  }
+}
+
+.hero-profile-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.profile-image-container {
+  position: relative;
+}
+
+.profile-ring-large {
+  width: 320px;
+  height: 400px;
+  border-radius: 16px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+  padding: 4px;
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+}
+
+.profile-inner-large {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #0f172a;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-ring-large {
+    width: 260px;
+    height: 320px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
         .hero-content {
           text-align: center;
           max-width: 800px;
@@ -984,11 +1075,13 @@ Allows users to provide a direct dataset path for instant analysis without manua
         }
 
         .contact-link.primary:hover {
+         background: linear-gradient(45deg, #2563eb, #7c3aed);
           transform: scale(1.05);
           box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
         }
 
         .contact-link.secondary {
+         background: linear-gradient(45deg, #2563eb, #7c3aed);
           border: 1px solid #64748b;
           color: white;
         }
@@ -1052,6 +1145,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
           }
         }
       `}</style>
+    
     </div>
   );
 };
