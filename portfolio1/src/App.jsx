@@ -4,6 +4,7 @@ import projectImg from "./assets/resort.png";
 import projectImg2 from "./assets/footwear site.png";
 import projectImg3 from "./assets/sentiment.png"; 
 import profilePhoto from "./assets/jaaseem.jpg";
+import projectImg5 from "./assets/chatbot.png";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -171,6 +172,41 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+        <section id="about" className="about-section">
+        <div className="container">
+          <h2 className="section-title">About Me</h2>
+          
+          <div className="about-grid">
+            <div className="about-content">
+              <p className="about-text">
+                I'm Jaseem Ahamed, an Artificial Intelligence and Data Science student passionate about 
+                turning data and intelligent systems into real-world solutions. My interests span machine 
+                learning, deep learning, forecasting, data-driven decision-making, and AI-powered applications.
+              </p>
+              <p className="about-text">
+                I build projects that apply these concepts in practice, including custom hotel booking 
+                websites, e-commerce platforms, and AI-driven automation tools. I bridge the gap between 
+                research and everyday problem-solving through data visualization and interactive applications.
+              </p>
+            </div>
+            
+            <div className="skills-card">
+              <h3 className="skills-title">Tech Stack</h3>
+              <div className="skills-grid">
+                {[
+                  'JavaScript', 'HTML', 'CSS', 'Python', 
+                  'Java', 'React', 'Node.js', 'AI/ML'
+                ].map((skill) => (
+                  <div key={skill} className="skill-item">
+                    <div className="skill-dot"></div>
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 {/* Projects Section */}
@@ -222,15 +258,7 @@ const Portfolio = () => {
                 <ExternalLink size={16} />
                 Live Demo
               </a>
-              <a
-                href="https://github.com/jaaseemahamed/chennai-grands"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link secondary"
-              >
-                <Code size={16} />
-                Source Code
-              </a>
+             
             </div>
           </div>
         </div>
@@ -264,10 +292,7 @@ const Portfolio = () => {
                 <ExternalLink size={16} />
                 Live Demo
               </a>
-              <a href="https://github.com/jaaseemahamed/zam-zam-enterprices" target="_blank" rel="noopener noreferrer" className="project-link secondary">
-                <Code size={16} />
-                Source Code
-              </a>
+             
             </div>
           </div>
         </div>
@@ -319,14 +344,48 @@ Allows users to provide a direct dataset path for instant analysis without manua
 
             <div className="project-links">
              
-              <a href="https://github.com/jaaseemahamed/movie_review_model" target="_blank" rel="noopener noreferrer" className="project-link secondary">
-                <Code size={16} />
-                Source Code
-              </a>
+            
             </div>
           </div>
         </div>
       </div>
+      {/* Project 4: Islamic Chatbot */}
+<div className="project-card">
+  <div className="project-layout">
+    <div className="project-image">
+      <img 
+        src={projectImg5} 
+        alt="Islamic Chatbot" 
+        className="project-img"
+      />
+    </div>
+    <div className="project-content">
+      <h3 className="project-title">Islamic Chatbot</h3>
+      <p className="project-description">
+       This project is a search engine–based model designed to help users explore and understand the Qur’an and Hadith. It allows users to ask questions and receive relevant verses and Hadith references as precise answers. The system features an intuitive interface with a bookmarking option, enabling users to save and revisit their favorite verses or references for future study.
+      </p>
+
+      <div className="tech-stack">
+        {['Python', 'NLP',  'React', 'datasets'].map((tech) => (
+          <span key={tech} className="tech-tag">{tech}</span>
+        ))}
+      </div>
+
+      <div className="project-links">
+        <a 
+          href="https://islamic-chatbot-7n4ihs1ss-jaaseems-projects.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="project-link primary"
+        >
+          <ExternalLink size={16} />
+          Live Demo
+        </a>
+       
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -335,41 +394,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
 
 
       {/* About Section */}
-      <section id="about" className="about-section">
-        <div className="container">
-          <h2 className="section-title">About Me</h2>
-          
-          <div className="about-grid">
-            <div className="about-content">
-              <p className="about-text">
-                I'm Jaseem Ahamed, an Artificial Intelligence and Data Science student passionate about 
-                turning data and intelligent systems into real-world solutions. My interests span machine 
-                learning, deep learning, forecasting, data-driven decision-making, and AI-powered applications.
-              </p>
-              <p className="about-text">
-                I build projects that apply these concepts in practice, including custom hotel booking 
-                websites, e-commerce platforms, and AI-driven automation tools. I bridge the gap between 
-                research and everyday problem-solving through data visualization and interactive applications.
-              </p>
-            </div>
-            
-            <div className="skills-card">
-              <h3 className="skills-title">Tech Stack</h3>
-              <div className="skills-grid">
-                {[
-                  'JavaScript', 'HTML', 'CSS', 'Python', 
-                  'Java', 'React', 'Node.js', 'AI/ML'
-                ].map((skill) => (
-                  <div key={skill} className="skill-item">
-                    <div className="skill-dot"></div>
-                    <span>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Contact Section */}
       <section id="contact" className="contact-section">
