@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx vite build",
+  "buildCommand": "npm run build -- --force",
   "outputDirectory": "dist",
-  "installCommand": "npm install"
+  "installCommand": "npm ci && chmod +x node_modules/.bin/*"
 }
