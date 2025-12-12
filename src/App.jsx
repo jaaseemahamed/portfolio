@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, ChevronDown, Menu, X, Star, Zap, Database, Brain } from 'lucide-react';
-import projectImg from "./assets/resort.png";
+import projectImg from "./assets/cgr.png";
 import projectImg2 from "./assets/footwear site.png";
 import projectImg3 from "./assets/sentiment.png"; 
-import profilePhoto from "./assets/jaaseem.jpg";
+import profilePhoto from "./assets/jazz.jpg";
 import projectImg5 from "./assets/chatbot.png";
 
 const Portfolio = () => {
