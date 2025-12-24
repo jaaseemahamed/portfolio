@@ -5,6 +5,7 @@ import projectImg2 from "./assets/footwear site.png";
 import projectImg3 from "./assets/sentiment.png"; 
 import profilePhoto from "./assets/jazz.jpg";
 import projectImg5 from "./assets/chatbot.png";
+import projectImg6 from "./assets/drowsiness.png";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -386,6 +387,52 @@ Allows users to provide a direct dataset path for instant analysis without manua
     </div>
   </div>
 </div>
+{/* Project 5: Drowsiness Detector */}
+      <div className="project-card">
+        <div className="project-layout">
+
+          {/* Image Section */}
+          <div className="project-image">
+            <img 
+              src={projectImg6} 
+              alt="Drowsiness Detector" 
+              className="project-img"
+            />
+          </div>
+
+          {/* Content Section */}
+          <div className="project-content">
+            <h3 className="project-title">
+              Drowsiness Detector
+            </h3>
+            <p className="project-description">
+              A real-time drowsiness detection web app built using React and Vite that monitors facial and eye movements through the webcam.The system detects signs of fatigue such as prolonged eye closure and alerts the user instantly.Designed for safety assistance, it runs efficiently in the browser with a fast and responsive UI.
+            </p>
+
+            {/* Tech Stack */}
+            <div className="tech-stack">
+              {['HTML', 'CSS', 'JavaScript', 'React', 'Vite'].map((tech) => (
+                <span key={tech} className="tech-tag">{tech}</span>
+              ))}
+            </div>
+
+            {/* Links */}
+            <div className="project-links">
+              <a
+                href="safety-assistance.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link primary"
+              >
+                <ExternalLink size={16} />
+                Live Demo
+              </a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     </div>
   </div>
