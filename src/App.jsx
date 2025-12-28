@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, ChevronDown, Menu, X, Star, Zap, Database, Brain } from 'lucide-react';
 import projectImg from "./assets/cgr.png";
 import projectImg2 from "./assets/footwear site.png";
-import projectImg3 from "./assets/sentiment.png"; 
+import projectImg3 from "./assets/sentiment.png";
 import profilePhoto from "./assets/jazz.jpg";
 import projectImg5 from "./assets/chatbot.png";
 import projectImg6 from "./assets/drowsiness.png";
@@ -26,7 +26,7 @@ const Portfolio = () => {
         if (element) {
           const offsetTop = element.offsetTop;
           const height = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
             setActiveSection(section);
           }
@@ -36,7 +36,7 @@ const Portfolio = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
@@ -55,7 +55,7 @@ const Portfolio = () => {
     <div className="portfolio">
       {/* Animated background particles */}
       <div className="bg-particles">
-        <div 
+        <div
           className="particle particle-1"
           style={{
             left: mousePosition.x - 192,
@@ -70,8 +70,8 @@ const Portfolio = () => {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-content">
-            <div className="logo"> M.Y.JAASEEM AHAMED</div>
-            
+            <div className="logo"></div>
+
             <div className="nav-links desktop-nav">
               {['hero', 'projects', 'about', 'contact'].map((item) => (
                 <button
@@ -121,9 +121,9 @@ const Portfolio = () => {
                 <div className="profile-ring-large">
                   <div className="profile-inner-large">
                     {/* Replace the src below with your actual profile image */}
-                    <img 
-                      src={profilePhoto} 
-                      alt="Jaaseem Ahamed" 
+                    <img
+                      src={profilePhoto}
+                      alt="Jaaseem Ahamed"
                       className="profile-photo"
                     />
                   </div>
@@ -134,9 +134,10 @@ const Portfolio = () => {
             {/* Right Content */}
             <div className="hero-content">
               <h1 className="hero-title">
-                Hi, I'm JAASEEM AHAMED.M.Y
+                <span className="greeting">Hi, I'm</span>
+                <span className="name">JAASEEM AHAMED.M.Y</span>
               </h1>
-              
+
               <div className="role-badges">
                 {[
                   { icon: Code, text: 'Developer' },
@@ -150,12 +151,12 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-              
+
               <p className="hero-description">
-                Passionate AI & Data Science student turning intelligent systems into real-world solutions. 
+                Passionate AI & Data Science student turning intelligent systems into real-world solutions.
                 Specializing in machine learning, data-driven insights, and innovative web applications.
               </p>
-              
+
               <div className="hero-actions">
                 <button
                   onClick={() => scrollToSection('projects')}
@@ -173,29 +174,29 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-        <section id="about" className="about-section">
+      <section id="about" className="about-section">
         <div className="container">
           <h2 className="section-title">About Me</h2>
-          
+
           <div className="about-grid">
             <div className="about-content">
               <p className="about-text">
-                I'm Jaseem Ahamed, an Artificial Intelligence and Data Science student passionate about 
-                turning data and intelligent systems into real-world solutions. My interests span machine 
+                I'm Jaseem Ahamed, an Artificial Intelligence and Data Science student passionate about
+                turning data and intelligent systems into real-world solutions. My interests span machine
                 learning, deep learning, forecasting, data-driven decision-making, and AI-powered applications.
               </p>
               <p className="about-text">
-                I build projects that apply these concepts in practice, including custom hotel booking 
-                websites, e-commerce platforms, and AI-driven automation tools. I bridge the gap between 
+                I build projects that apply these concepts in practice, including custom hotel booking
+                websites, e-commerce platforms, and AI-driven automation tools. I bridge the gap between
                 research and everyday problem-solving through data visualization and interactive applications.
               </p>
             </div>
-            
+
             <div className="skills-card">
               <h3 className="skills-title">Tech Stack</h3>
               <div className="skills-grid">
                 {[
-                  'JavaScript', 'HTML', 'CSS', 'Python', 
+                  'JavaScript', 'HTML', 'CSS', 'Python',
                   'Java', 'React', 'Node.js', 'AI/ML'
                 ].map((skill) => (
                   <div key={skill} className="skill-item">
@@ -210,238 +211,238 @@ const Portfolio = () => {
       </section>
 
 
-{/* Projects Section */}
-<section id="projects" className="projects-section">
-  <div className="container">
-    <h2 className="section-title">Featured Projects</h2>
+      {/* Projects Section */}
+      <section id="projects" className="projects-section">
+        <div className="container">
+          <h2 className="section-title">Featured Projects</h2>
 
-    <div className="projects-grid">
+          <div className="projects-grid">
 
-      {/* Project 1: Resort Booking */}
-      <div className="project-card">
-        <div className="project-layout">
+            {/* Project 1: Resort Booking */}
+            <div className="project-card">
+              <div className="project-layout">
 
-          {/* Image Section */}
-          <div className="project-image">
-            <img 
-              src={projectImg} 
-              alt="Resort Booking Platform" 
-              className="project-img"
-            />
-          </div>
+                {/* Image Section */}
+                <div className="project-image">
+                  <img
+                    src={projectImg}
+                    alt="Resort Booking Platform"
+                    className="project-img"
+                  />
+                </div>
 
-          {/* Content Section */}
-          <div className="project-content">
-            <h3 className="project-title">
-              A Responsive Booking Website For Resorts
-            </h3>
-            <p className="project-description">
-              A full-stack room booking platform for Chennai Grand Residency resort in Kodaikanal. 
-              Features real-time data handling, smooth UI/UX, and an integrated  telegram chatbot assistant 
-              for enhanced customer interaction to book rooms and streamlined reservations.
-            </p>
+                {/* Content Section */}
+                <div className="project-content">
+                  <h3 className="project-title">
+                    A Responsive Booking Website For Resorts
+                  </h3>
+                  <p className="project-description">
+                    A full-stack room booking platform for Chennai Grand Residency resort in Kodaikanal.
+                    Features real-time data handling, smooth UI/UX, and an integrated  telegram chatbot assistant
+                    for enhanced customer interaction to book rooms and streamlined reservations.
+                  </p>
 
-            {/* Tech Stack */}
-            <div className="tech-stack">
-              {['HTML', 'CSS', 'JavaScript', 'React', 'Vite'].map((tech) => (
-                <span key={tech} className="tech-tag">{tech}</span>
-              ))}
+                  {/* Tech Stack */}
+                  <div className="tech-stack">
+                    {['HTML', 'CSS', 'JavaScript', 'React', 'Vite'].map((tech) => (
+                      <span key={tech} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="project-links">
+                    <a
+                      href="https://chennai-grands.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link primary"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Links */}
-            <div className="project-links">
-              <a
-                href="https://chennai-grands.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link primary"
-              >
-                <ExternalLink size={16} />
-                Live Demo
-              </a>
-             
+            {/* Project 2: Footwear E-Commerce */}
+            <div className="project-card">
+              <div className="project-layout">
+                <div className="project-image">
+                  <img
+                    src={projectImg2}
+                    alt="Footwear e-commerce website"
+                    className="project-img"
+                  />
+                </div>
+                <div className="project-content">
+                  <h3 className="project-title">Footwear E-Commerce Website</h3>
+                  <p className="project-description">
+                    A modern footwear e-commerce website with product listing, cart system, and responsive design.
+                    Built using React, Node.js. This model uses the telegram chatbot to make store the datas of the users and deployed on Vercel.
+                  </p>
+
+                  <div className="tech-stack">
+                    {['React', 'Node.js', 'CSS', 'MongoDB', 'Vercel'].map((tech) => (
+                      <span key={tech} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-links">
+                    <a href="https://zam-zam-enterprice-5i5h.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link primary">
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Project 3: Sentiment Analysis App */}
+            <div className="project-card">
+              <div className="project-layout">
+                <div className="project-image">
+                  <img
+                    src={projectImg3}
+                    alt="Resort Booking Platform"
+                    className="project-img"
+                  />
+                </div>
+                <div className="project-content">
+                  <h3 className="project-title">Sentiment Analysis App</h3>
+                  <p className="project-description">
+                    A machine learning-powered web application that classifies movie reviews as positive or negative, built using TensorFlow, Flask, and a React frontend for smooth and responsive user interaction.
+
+                    🚀 Key Features
+
+                    *Deep Learning Model (TensorFlow):
+                    Trained on a sentiment analysis dataset to understand and classify movie reviews with high accuracy.
+
+                    *Accuracy Evaluation:
+                    The app implements various machine learning algorithms and calculates accuracy metrics to evaluate model performance on the dataset.
+
+                    *Custom Dataset Upload:
+                    Users can upload their own dataset to retrain or test the model with new data for flexible experimentation.
+
+                    Three Modes:
+
+                    🗣️ Interactive Mode:
+                    Users can directly enter a movie review, and the system will analyze it using the trained model and database to predict whether the sentiment is positive or negative.
+
+                    🧪 Demo Mode:
+                    Uses a preloaded demo dataset to showcase the model's sentiment predictions and provide a summary of overall sentiments in the dataset.
+
+                    ⚡ Quick Analysis Mode:
+                    Allows users to provide a direct dataset path for instant analysis without manual upload or setup.
+                  </p>
+
+                  <div className="tech-stack">
+                    {['Python', 'Flask', 'TensorFlow', 'React'].map((tech) => (
+                      <span key={tech} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-links">
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Project 4: Islamic Chatbot */}
+            <div className="project-card">
+              <div className="project-layout">
+                <div className="project-image">
+                  <img
+                    src={projectImg5}
+                    alt="Islamic Chatbot"
+                    className="project-img"
+                  />
+                </div>
+                <div className="project-content">
+                  <h3 className="project-title">Islamic Chatbot</h3>
+                  <p className="project-description">
+                    This project is a search engine–based model designed to help users explore and understand the Qur’an and Hadith. It allows users to ask questions and receive relevant verses and Hadith references as precise answers. The system features an intuitive interface with a bookmarking option, enabling users to save and revisit their favorite verses or references for future study.
+                  </p>
+
+                  <div className="tech-stack">
+                    {['Python', 'NLP', 'React', 'datasets'].map((tech) => (
+                      <span key={tech} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-links">
+                    <a
+                      href="https://islamic-chatbot-7n4ihs1ss-jaaseems-projects.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link primary"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Project 5: Drowsiness Detector */}
+            <div className="project-card">
+              <div className="project-layout">
+
+                {/* Image Section */}
+                <div className="project-image">
+                  <img
+                    src={projectImg6}
+                    alt="Drowsiness Detector"
+                    className="project-img"
+                  />
+                </div>
+
+                {/* Content Section */}
+                <div className="project-content">
+                  <h3 className="project-title">
+                    Drowsiness Detector
+                  </h3>
+                  <p className="project-description">
+                    A real-time drowsiness detection web app built using React and Vite that monitors facial and eye movements through the webcam.The system detects signs of fatigue such as prolonged eye closure and alerts the user instantly.Designed for safety assistance, it runs efficiently in the browser with a fast and responsive UI.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="tech-stack">
+                    {['HTML', 'CSS', 'JavaScript', 'React', 'Vite'].map((tech) => (
+                      <span key={tech} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="project-links">
+                    <a
+                      href="safety-assistance.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link primary"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </div>
-      </div>
-
-      {/* Project 2: Footwear E-Commerce */}
-      <div className="project-card">
-        <div className="project-layout">
-           <div className="project-image">
-            <img 
-              src={projectImg2} 
-              alt="Footwear e-commerce website" 
-              className="project-img"
-            />
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">Footwear E-Commerce Website</h3>
-            <p className="project-description">
-              A modern footwear e-commerce website with product listing, cart system, and responsive design. 
-              Built using React, Node.js. This model uses the telegram chatbot to make store the datas of the users and deployed on Vercel.
-            </p>
-
-            <div className="tech-stack">
-              {['React', 'Node.js', 'CSS', 'MongoDB', 'Vercel'].map((tech) => (
-                <span key={tech} className="tech-tag">{tech}</span>
-              ))}
-            </div>
-
-            <div className="project-links">
-              <a href="https://zam-zam-enterprice-5i5h.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link primary">
-                <ExternalLink size={16} />
-                Live Demo
-              </a>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Project 3: Sentiment Analysis App */}
-      <div className="project-card">
-        <div className="project-layout">
-           <div className="project-image">
-            <img 
-              src={projectImg3} 
-              alt="Resort Booking Platform" 
-              className="project-img"
-            />
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">Sentiment Analysis App</h3>
-            <p className="project-description">
-              A machine learning-powered web application that classifies movie reviews as positive or negative, built using TensorFlow, Flask, and a React frontend for smooth and responsive user interaction.
-
-🚀 Key Features
-
-*Deep Learning Model (TensorFlow):
-Trained on a sentiment analysis dataset to understand and classify movie reviews with high accuracy.
-
-*Accuracy Evaluation:
-The app implements various machine learning algorithms and calculates accuracy metrics to evaluate model performance on the dataset.
-
-*Custom Dataset Upload:
-Users can upload their own dataset to retrain or test the model with new data for flexible experimentation.
-
-Three Modes:
-
-🗣️ Interactive Mode:
-Users can directly enter a movie review, and the system will analyze it using the trained model and database to predict whether the sentiment is positive or negative.
-
-🧪 Demo Mode:
-Uses a preloaded demo dataset to showcase the model's sentiment predictions and provide a summary of overall sentiments in the dataset.
-
-⚡ Quick Analysis Mode:
-Allows users to provide a direct dataset path for instant analysis without manual upload or setup.
-            </p>
-
-            <div className="tech-stack">
-              {['Python', 'Flask', 'TensorFlow', 'React'].map((tech) => (
-                <span key={tech} className="tech-tag">{tech}</span>
-              ))}
-            </div>
-
-            <div className="project-links">
-             
-            
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Project 4: Islamic Chatbot */}
-<div className="project-card">
-  <div className="project-layout">
-    <div className="project-image">
-      <img 
-        src={projectImg5} 
-        alt="Islamic Chatbot" 
-        className="project-img"
-      />
-    </div>
-    <div className="project-content">
-      <h3 className="project-title">Islamic Chatbot</h3>
-      <p className="project-description">
-       This project is a search engine–based model designed to help users explore and understand the Qur’an and Hadith. It allows users to ask questions and receive relevant verses and Hadith references as precise answers. The system features an intuitive interface with a bookmarking option, enabling users to save and revisit their favorite verses or references for future study.
-      </p>
-
-      <div className="tech-stack">
-        {['Python', 'NLP',  'React', 'datasets'].map((tech) => (
-          <span key={tech} className="tech-tag">{tech}</span>
-        ))}
-      </div>
-
-      <div className="project-links">
-        <a 
-          href="https://islamic-chatbot-7n4ihs1ss-jaaseems-projects.vercel.app/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="project-link primary"
-        >
-          <ExternalLink size={16} />
-          Live Demo
-        </a>
-       
-      </div>
-    </div>
-  </div>
-</div>
-{/* Project 5: Drowsiness Detector */}
-      <div className="project-card">
-        <div className="project-layout">
-
-          {/* Image Section */}
-          <div className="project-image">
-            <img 
-              src={projectImg6} 
-              alt="Drowsiness Detector" 
-              className="project-img"
-            />
-          </div>
-
-          {/* Content Section */}
-          <div className="project-content">
-            <h3 className="project-title">
-              Drowsiness Detector
-            </h3>
-            <p className="project-description">
-              A real-time drowsiness detection web app built using React and Vite that monitors facial and eye movements through the webcam.The system detects signs of fatigue such as prolonged eye closure and alerts the user instantly.Designed for safety assistance, it runs efficiently in the browser with a fast and responsive UI.
-            </p>
-
-            {/* Tech Stack */}
-            <div className="tech-stack">
-              {['HTML', 'CSS', 'JavaScript', 'React', 'Vite'].map((tech) => (
-                <span key={tech} className="tech-tag">{tech}</span>
-              ))}
-            </div>
-
-            {/* Links */}
-            <div className="project-links">
-              <a
-                href="safety-assistance.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link primary"
-              >
-                <ExternalLink size={16} />
-                Live Demo
-              </a>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
       {/* About Section */}
-     
+
 
       {/* Contact Section */}
       <section id="contact" className="contact-section">
@@ -451,7 +452,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
             <p className="contact-description">
               Ready to collaborate or discuss exciting opportunities? I'd like to hear from you!
             </p>
-            
+
             <div className="contact-links">
               <a
                 href="mailto:jaseemahamed2004@gmail.com"
@@ -691,7 +692,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 40px;
+  padding-top: 0; 
 }
 
 .profile-image-container {
@@ -703,8 +704,16 @@ Allows users to provide a direct dataset path for instant analysis without manua
   height: 400px;
   border-radius: 16px;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 200% 200%;
   padding: 4px;
   box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+  animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .profile-inner-large {
@@ -749,55 +758,83 @@ Allows users to provide a direct dataset path for instant analysis without manua
     text-align: center;
   }
 }
-        .hero-content {
-          text-align: center;
-          max-width: 800px;
-        }
 
-        .profile-container {
-          margin-bottom: 32px;
-        }
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
 
-        .profile-ring {
-          width: 128px;
-          height: 128px;
-          margin: 0 auto 32px;
-          border-radius: 50%;
-          background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-          padding: 4px;
-          animation: spin 8s linear infinite;
-        }
+.profile-container {
+  margin-bottom: 32px;
+}
 
-        .profile-inner {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          background: #0f172a;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+.profile-ring {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 32px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  padding: 4px;
+  animation: spin 8s linear infinite;
+}
 
-        .profile-text {
-          font-size: 36px;
-          font-weight: bold;
-        }
+.profile-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        .hero-title {
-          font-size: clamp(48px, 8vw, 96px);
-          font-weight: bold;
-          margin-bottom: 24px;
-          background: linear-gradient(45deg, #60a5fa, #a855f7, #ec4899);
+.profile-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.greeting {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 500;
+  color: #94a3b8;
+  animation: slideDown 0.8s ease-out;
+}
+
+.name {
+  font-size: clamp(32px, 6vw, 64px); /* Reduced max size to prevent wrapping */
+  font-weight: 800;
+  white-space: nowrap; /* Force single line */
+          font-weight: 800;
+          line-height: 1.1;
+          background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          animation: pulse 3s infinite;
+          animation: slideUp 0.8s ease-out;
+          filter: drop-shadow(0 0 2em rgba(168, 85, 247, 0.2));
+        }
+
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .role-badges {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 16px;
           margin-bottom: 32px;
         }
@@ -1217,7 +1254,7 @@ Allows users to provide a direct dataset path for instant analysis without manua
           }
         }
       `}</style>
-    
+
     </div>
   );
 };
