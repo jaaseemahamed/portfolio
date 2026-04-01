@@ -420,7 +420,7 @@ const Portfolio = () => {
                   {/* Links */}
                   <div className="project-links">
                     <a
-                      href="safety-assistance.vercel.app"
+                      href="https://drowsiness-detection-phi.vercel.app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-link primary"
